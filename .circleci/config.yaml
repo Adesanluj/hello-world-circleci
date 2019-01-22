@@ -1,8 +1,8 @@
 version: 2
 jobs:
   build:
-    environment:
-      CICA_DEVELOPMENT: cica-development
+    docker:
+      - image: cicrcleci/node:8.11.3
     steps:
       - name: Build image
       - run:
