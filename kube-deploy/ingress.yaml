@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cica-hello-world-ingress
+spec:
+  rules:
+  - host: cica-hello-world.apps.cloud-platform-live-0.k8s.integration.dsd.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: cica-hello-world-service
+          servicePort: 3010
