@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: cica-hello-world
+spec:
+  selector:
+    matchLabels:
+      app: cica-hello-world
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: cica-hello-world
+    spec:
+      containers:
+      - name: cica-hello-word
+        image: 926803513772.dkr.ecr.eu-west-1.amazonaws.com/cica/cicadevelopment:online
+        ports:
+        - containerPort: 3010
